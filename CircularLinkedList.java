@@ -4,29 +4,14 @@
  */
 public class CircularLinkedList<E> extends AbstractList implements IList<E> {
 
+	private Node<E> tail;
+	
 	/**
 	 * 
 	 */
 	public CircularLinkedList() {
-		// TODO Auto-generated constructor stub
-	}
-
-	/* (non-Javadoc)
-	 * @see IList#isEmpty()
-	 */
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	/* (non-Javadoc)
-	 * @see IList#clear()
-	 */
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-
+		tail = null;
+		count = 0;
 	}
 
 	/* (non-Javadoc)
@@ -34,8 +19,15 @@ public class CircularLinkedList<E> extends AbstractList implements IList<E> {
 	 */
 	@Override
 	public void addFirst(E value) {
-		// TODO Auto-generated method stub
-
+		Node<E> temp = new Node<E>(value);
+		if (tail == null) {
+			tail = temp;
+			tail.setNext(tail);
+		} else {
+			temp.setNext(tail.getNext());
+			tail.setNext(temp);
+		}
+		count++;
 	}
 
 	/* (non-Javadoc)
@@ -43,8 +35,7 @@ public class CircularLinkedList<E> extends AbstractList implements IList<E> {
 	 */
 	@Override
 	public E getFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		return tail.getNext().value();
 	}
 
 	/* (non-Javadoc)
@@ -52,7 +43,17 @@ public class CircularLinkedList<E> extends AbstractList implements IList<E> {
 	 */
 	@Override
 	public E removeFirst() {
-		// TODO Auto-generated method stub
+		if (!isEmpty()) {
+			Node<E> temp = tail.getNext();
+			if (tail == tail.getNext()) {
+				tail = null;
+			} else {
+				tail.setNext(temp.getNext());
+				temp.setNext(null);
+			}
+			count--;
+			return temp.value();
+		}
 		return null;
 	}
 }

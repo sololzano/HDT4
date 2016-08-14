@@ -25,11 +25,4 @@ public interface IStack<E> {
 	 * @return
 	 */
 	public int size();
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public boolean isEmpty();
-	
 }

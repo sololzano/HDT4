@@ -1,38 +1,54 @@
-
+/**
+ * 
+ * @author carlos
+ *
+ * @param <E>
+ */
 public class DoubleLinkedList<E> extends AbstractList implements IList<E> {
-
+	
+	/**
+	 * 
+	 */
+	private DoubleNode<E> head;
+	private DoubleNode<E> tail;
+	
+	/**
+	 * 
+	 */
 	public DoubleLinkedList() {
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-		
+		super.count = 0;
+		head = null;
+		tail = null;
 	}
 
 	@Override
 	public void addFirst(E value) {
-		// TODO Auto-generated method stub
-		
+		head = new DoubleNode<E> (value, head, null);
+		if (tail == null) {
+			tail = head;
+		}
+		super.count++;
 	}
 
 	@Override
 	public E getFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		return head.value;
 	}
 
 	@Override
 	public E removeFirst() {
-		// TODO Auto-generated method stub
+		if (!isEmpty()) {
+			DoubleNode<E> temp = head;
+			head = (DoubleNode<E>) head.getNext();
+			if (head == null) {
+				tail = null;
+			} else {
+				head.setPrevious(null);
+			}
+			temp.setNext(null);
+			count--;
+			return temp.value();
+		}
 		return null;
 	}
-
 }

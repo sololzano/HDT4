@@ -3,17 +3,6 @@
  *
  */
 public interface IList<E> {
-
-	/**
-	 * 
-	 * @return
-	 */
-	public boolean isEmpty();
-	
-	/**
-	 * 
-	 */
-	public void clear();
 	
 	/**
 	 * 

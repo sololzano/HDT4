@@ -7,12 +7,22 @@
  *
  */
 public abstract class AbstractStack {
-
+	
+	protected int count;
+	
 	/**
 	 * 
+	 * @return
 	 */
-	public AbstractStack() {
-		
+	public int size() {
+		return count;
 	}
-
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean isEmpty() {
+		return (count == 0);
+	}
 }

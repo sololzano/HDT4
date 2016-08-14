@@ -1,58 +1,40 @@
 /**
  * 
- */
-
-/**
  * @author carlos
  *
+ * @param <E>
  */
 public class SinglyLinkedList<E> extends AbstractList implements IList<E> {
 
-	private Node head;
-	private int count;
+	private Node<E> head;
 	
 	/**
 	 * 
 	 */
 	public SinglyLinkedList() {
-		
-	}
-	
-	/**
-	 * 
-	 */
-	public int size() {
-		return count;
-	}
-
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-		
+		head = null;
+		super.count = 0;
 	}
 
 	@Override
 	public void addFirst(E value) {
-		// TODO Auto-generated method stub
-		
+		head = new Node<E>(value, head);
+		super.count++;
 	}
 
 	@Override
 	public E getFirst() {
-		// TODO Auto-generated method stub
-		return null;
+		return head.value;
 	}
 
 	@Override
 	public E removeFirst() {
-		// TODO Auto-generated method stub
+		if (!super.isEmpty()) {
+			Node<E> temp = head;
+			head = head.next;
+			super.count--;
+			return temp.value();
+		}
 		return null;
 	}
-
 }

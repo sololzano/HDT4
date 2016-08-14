@@ -10,14 +10,16 @@ public class DoubleNode<E> extends Node<E> {
 	 */
 	public DoubleNode(E value) {
 		super(value);
+		previous = null;
 	}
 
 	/**
 	 * @param value
 	 * @param next
 	 */
-	public DoubleNode(E value, DoubleNode<E> next) {
+	public DoubleNode(E value, DoubleNode<E> next, DoubleNode<E> previous) {
 		super(value, next);
+		this.previous = previous;
 	}
 	
 	/**

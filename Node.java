@@ -40,6 +40,14 @@ public class Node<E> {
 	 * 
 	 * @return
 	 */
+	public Node<E> getNext() {
+		return next;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public E value() {
 		return value;
 	}
