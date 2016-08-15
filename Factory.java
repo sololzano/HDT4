@@ -1,18 +1,19 @@
 /**
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
+ * @param <E>
  */
 public class Factory<E> {
 
 	/**
-	 * 
+	 * Crea un patrón Factory vacío
 	 */
 	public Factory() {
 		
 	}
 	
 	/**
-	 * 
+	 * @param option El tipo de estructura de datos a utilizar con la pila
 	 * @return La pila implementada con la estructura seleccionada
 	 */
 	public IStack<E> createObject(int option) {
@@ -28,6 +29,6 @@ public class Factory<E> {
 		case 5:
 			return new ListStack<E>(option);
 		}
-		return null;
+		return new ArrayListStack<E>();
 	}
 }

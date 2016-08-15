@@ -1,18 +1,15 @@
 /**
- * 
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
  */
 
-/**
- * @author carlos
- *
- */
 public abstract class AbstractStack {
 	
 	protected int count;
 	
 	/**
 	 * 
-	 * @return
+	 * @return El tamaño de la pila
 	 */
 	public int size() {
 		return count;
@@ -20,7 +17,7 @@ public abstract class AbstractStack {
 	
 	/**
 	 * 
-	 * @return
+	 * @return true si la pila está vacía
 	 */
 	public boolean isEmpty() {
 		return (count == 0);

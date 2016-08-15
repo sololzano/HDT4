@@ -3,15 +3,18 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 /**
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
+ * @param <E>
  */
+
 public class Calc<E> {
 
 	private IStack<E> stack;
 	private String steps;
+	
 	/**
-	 * 
+	 * Constructor vacío
 	 */
 	public Calc() {
 		steps = "\r\n" + "Operaciones: " + "\r\n";
@@ -19,7 +22,8 @@ public class Calc<E> {
 	
 	/**
 	 * 
-	 * @param data
+	 * @param data String con expresión postfix
+	 * @param type Estructura de datos para implementar pila
 	 * @return
 	 */
 	public int operate(String data, int type) {
@@ -72,7 +76,7 @@ public class Calc<E> {
 	}
 
 	/**
-	 * 
+	 * @return Las operaciones realizadas
 	 */
 	public String toString() {
 		return steps;
@@ -80,7 +84,7 @@ public class Calc<E> {
 
 	/**
 	 * 
-	 * @return
+	 * @return La línea de texto con la expresión postfix
 	 */
 	public String readFile(String path) {
 		String resultado = "";

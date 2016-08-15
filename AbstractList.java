@@ -1,6 +1,6 @@
 /**
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
  */
 public abstract class AbstractList {
 
@@ -11,7 +11,7 @@ public abstract class AbstractList {
 	
 	/**
 	 * 
-	 * @return
+	 * @return El tamaño de la lista
 	 */
 	public int size() {
 		return count;
@@ -19,7 +19,7 @@ public abstract class AbstractList {
 	
 	/**
 	 * 
-	 * @return
+	 * @return true si la lista está vacía
 	 */
 	public boolean isEmpty() {
 		return (count == 0);

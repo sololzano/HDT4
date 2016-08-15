@@ -1,16 +1,18 @@
 /**
- * 
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
  * @param <E>
  */
+
 public class ListStack<E> extends AbstractStack implements IStack<E> {
 
 	private IList<E> stack;
 	
 	/**
-	 * 
-	 * @param type
+	 * @pre N/A
+	 * @post N/A
+	 * @param type El tipo lista para implementar en pila
+	 * Construye una pila utilizando la estructura lista
 	 */
 	public ListStack(int type) {
 		switch (type) {
@@ -26,7 +28,7 @@ public class ListStack<E> extends AbstractStack implements IStack<E> {
 	}
 	
 	/**
-	 * 
+	 * Construye una pila utilizando una lista simplemente enlazada
 	 */
 	public ListStack() {
 		this(3);

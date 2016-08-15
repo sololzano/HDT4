@@ -1,9 +1,8 @@
 import java.util.Vector;
 
 /**
- * 
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
  * @param <E>
  */
 public class VectorStack<E> extends AbstractStack implements IStack<E> {
@@ -11,7 +10,7 @@ public class VectorStack<E> extends AbstractStack implements IStack<E> {
 	private Vector<E> stack;
 	
 	/**
-	 * 
+	 * Construye una pila vacía utilizando un vector
 	 */
 	public VectorStack() {
 		count = 0;

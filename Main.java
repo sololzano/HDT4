@@ -2,8 +2,9 @@ import static java.lang.System.*;
 
 import java.util.Scanner;
 /**
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
+ * @param <E>
  */
 public class Main {
 

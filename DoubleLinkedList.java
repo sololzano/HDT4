@@ -1,9 +1,9 @@
 /**
- * 
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
  * @param <E>
  */
+
 public class DoubleLinkedList<E> extends AbstractList implements IList<E> {
 	
 	/**
@@ -13,7 +13,7 @@ public class DoubleLinkedList<E> extends AbstractList implements IList<E> {
 	private DoubleNode<E> tail;
 	
 	/**
-	 * 
+	 * Crea una lista doblemente enlazada vacía
 	 */
 	public DoubleLinkedList() {
 		super.count = 0;

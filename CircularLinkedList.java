@@ -1,13 +1,14 @@
 /**
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
+ * @param <E> 
  */
 public class CircularLinkedList<E> extends AbstractList implements IList<E> {
 
 	private Node<E> tail;
 	
 	/**
-	 * 
+	 * Crea lista circularmente enlazada vacía
 	 */
 	public CircularLinkedList() {
 		tail = null;

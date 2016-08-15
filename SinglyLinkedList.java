@@ -1,7 +1,6 @@
 /**
- * 
- * @author carlos
- *
+ * @author Luis Diego Sierra, Carlos Solórzano
+ * @since 13.08.2016
  * @param <E>
  */
 public class SinglyLinkedList<E> extends AbstractList implements IList<E> {
@@ -9,7 +8,7 @@ public class SinglyLinkedList<E> extends AbstractList implements IList<E> {
 	private Node<E> head;
 	
 	/**
-	 * 
+	 * Construye una lista vacía
 	 */
 	public SinglyLinkedList() {
 		head = null;
